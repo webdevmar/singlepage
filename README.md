@@ -1,0 +1,2 @@
+# singlepage
+simple_singlepage
