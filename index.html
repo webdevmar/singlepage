@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SinglePage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Marcin Pawluczuk</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores at nobis unde ad facere delectus, dignissimos quae itaque sapiente fugit obcaecati totam quis magni atque neque quod, animi adipisci officiis!</p>
+    </div>
+    <video src="imgs/video.mp4" class="video" autoplay loop><img src="imgs/heading.jpg"></video>
+  </header>
+  <nav class="nav">
+    <div class="container">
+      <h2>Nawigacja</h2>
+      <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#offer">Idea</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="section" id="about">
+    <div class="container">
+      <h2>About me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum autem enim ab voluptatibus similique quam esse, fugit consectetur, dicta, dolorum libero tempora. Accusantium molestiae qui, voluptatem cumque minus. Quisquam, quidem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam eius nesciunt iure, voluptate neque ducimus consectetur mollitia reprehenderit cum minus quod quas nostrum aliquam expedita sapiente dolor maxime vitae quisquam!</p>
+      <p>Labore hic, veniam itaque ex incidunt odio voluptate cupiditate numquam adipisci perferendis dignissimos aspernatur necessitatibus fuga laborum eos? Voluptatibus, nemo, aliquam. Nemo odio quidem velit animi magnam, molestias deleniti tenetur.</p>
+      <p>Omnis aliquam nam, laboriosam reprehenderit temporibus nobis nostrum dolorem fugiat maiores dicta fugit eos esse magni laborum officia corrupti nisi a voluptatum, exercitationem recusandae mollitia? Quaerat rem amet, quod necessitatibus?</p>
+    </div>
+  </section>
+  <section class="section" id="offer">
+    <div class="container">
+      <h2>Idea</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum autem enim ab voluptatibus similique quam esse, fugit consectetur, dicta, dolorum libero tempora. Accusantium molestiae qui, voluptatem cumque minus. Quisquam, quidem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus eius ipsa error eum dolores nam distinctio deleniti, temporibus, velit, labore commodi facilis fugit sapiente! Ipsum exercitationem cum sit, nisi quia.</p>
+      <p>Voluptas aperiam perferendis, at vel iure. Maiores maxime fugiat, ipsam! Dicta quos, atque velit sunt ut, suscipit eveniet sed accusamus eum vel recusandae corporis quasi consequuntur nemo reiciendis natus animi?</p>
+      <p>Porro dicta eius, ea quas consequuntur. Quia enim deserunt aut ipsa ratione quis, quibusdam optio amet fugiat itaque inventore ipsam expedita, rem ab omnis. At voluptatum hic eum consequuntur omnis.</p>
+    </div>
+  </section>
+  <section class="section" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum autem enim ab voluptatibus similique quam esse, fugit consectetur, dicta, dolorum libero tempora. Accusantium molestiae qui, voluptatem cumque minus. Quisquam, quidem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil in, reiciendis alias! Esse consectetur quibusdam, dicta dolorum vero totam mollitia, impedit soluta? Excepturi commodi debitis amet, possimus in illum ea?</p>
+      <p>Quaerat doloribus officia magni at quas aspernatur, omnis deserunt, ab debitis, placeat totam similique necessitatibus ducimus eligendi porro quis quibusdam. Corporis recusandae doloribus officia similique assumenda et a. Optio, est?</p>
+      <p>Deserunt voluptas recusandae fugiat ea ad, aperiam vel nisi quidem id! Itaque architecto facere laboriosam, dolorum hic tempore explicabo consequatur quia harum inventore, natus. Placeat, voluptatem doloribus vitae sunt asperiores!</p>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum autem enim ab voluptatibus similique quam esse, fugit consectetur, dicta, dolorum libero tempora. Accusantium molestiae qui, voluptatem cumque minus. Quisquam, quidem.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto animi non, provident nisi quo numquam nesciunt harum voluptates minima totam nihil deleniti repellendus ipsum velit. Nemo maxime, rerum harum!</p>
+      <p>Qui omnis aut autem delectus ducimus assumenda, reiciendis cupiditate, veritatis et, distinctio corrupti voluptates non natus voluptate, expedita consequuntur. Maxime fugit earum dolores, consectetur autem animi accusamus possimus ducimus distinctio!</p>
+      <p>Vero deleniti autem eos beatae mollitia sint possimus adipisci, velit eveniet maiores, pariatur obcaecati repudiandae voluptatibus asperiores temporibus molestias, consequatur est at fugiat laudantium enim optio! Laborum facere eaque illum.</p>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; <a href="http://webdevmar.com/">webdevmar</a>, 2019.</p>
+  </footer>
+  <script src="jquery.js"></script>
+  <script src="stickyfill.js"></script>
+  <script>
+    $('.nav').Stickyfill();
+
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').stop().animate({
+              scrollTop: target.offset().top - 70
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
